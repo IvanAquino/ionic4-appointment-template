@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>My appointments</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card mode="ios" *ngFor="let appointment of appointments" class="appointment-list ion-no-margin">
+    <ion-card-content>
+      <div class="col-date ion-text-center">
+        <span class="small month">{{ appointment.month }}</span> <br>
+        <span class="day">{{ appointment.day }}</span> <br>
+        <span class="small">{{ appointment.dayname }}</span>
+      </div>
+      <div class="col-details">
+        <h2>Timing: {{ appointment.time }}</h2>
+        <p>Status: {{ appointment.status }}</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

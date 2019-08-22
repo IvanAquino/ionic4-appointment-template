@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Testimonials</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines="none">
+    <ion-item *ngFor="let t of testimonials">
+      <ion-avatar slot="start" class="testimonial-avatar">
+        <img [src]="t.image" />
+      </ion-avatar>
+      <ion-label class="label-nowrap">
+        <h2>{{ t.name }}</h2>
+        <p>{{ t.description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

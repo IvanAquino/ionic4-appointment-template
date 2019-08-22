@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Book an appointment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row class="appointment-row-dates shadow">
+    <ion-col size="2" class="ion-text-center" tappable 
+      *ngFor="let day of days"
+      (click)="checkDay(day)"
+      [ngClass]="{'active': dayActive == getStrDay(day)}"
+    >
+      <span class="small month">{{ day.month }}</span> <br>
+      <span class="day">{{ day.day }}</span> <br>
+      <span class="small">{{ day.dayname }}</span>
+    </ion-col>
+  </ion-row>
+
+  <div class="ion-padding">
+
+    <ion-grid class="card-grid">
+      <ion-row>
+        <ion-col size="4" tappable 
+          *ngFor="let hour of hours" 
+          [ngClass]="{'active': hour == hourActive}"
+          (click)="checkHour(hour)"
+        >
+          <ion-card mode="ios" class="ion-no-margin">
+            <ion-card-content class="ion-text-center">
+              {{ hour }}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button mode="ios" expand="block" color="tertiary" (click)="next()">
+      Next
+    </ion-button>
+    
+  </div>
+
+</ion-content>

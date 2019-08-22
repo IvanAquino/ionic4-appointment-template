@@ -4,41 +4,69 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      Brand
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+  <ion-slides>
+    <ion-slide>
+      <img src="https://img.huffingtonpost.com/asset/5cd50c142500005500a10019.jpeg?ops=scalefit_630_noupscale" alt="">
+    </ion-slide>
+  </ion-slides>
+
+  <div class="ion-padding">
+
+    <ion-button mode="ios" color="tertiary" expand="block" (click)="navigateBookAppointment()">
+      Book an appointment
+    </ion-button>
+
+    <ion-grid class="card-grid">
+      <ion-row>
+
+        <ion-col size="6" tappable (click)="redirect('services')">
+          <ion-card mode="ios" class="ion-no-margin">
+            <ion-card-content class="ion-text-center">
+              <img src="https://image.flaticon.com/icons/svg/1773/1773178.svg">
+              <p>Services</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col size="6" tappable (click)="redirect('office-hours')">
+          <ion-card mode="ios" class="ion-no-margin">
+            <ion-card-content class="ion-text-center">
+              <img src="https://image.flaticon.com/icons/svg/1247/1247840.svg">
+              <p>Office hours</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+      </ion-row>
+
+      <ion-row>
+      
+        <ion-col size="6" tappable (click)="redirect('testimonials')">
+          <ion-card mode="ios" class="ion-no-margin">
+            <ion-card-content class="ion-text-center">
+              <img src="https://image.flaticon.com/icons/svg/1443/1443446.svg">
+              <p>Testimonials</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      
+        <ion-col size="6" tappable (click)="redirect('contact')">
+          <ion-card mode="ios" class="ion-no-margin">
+            <ion-card-content class="ion-text-center">
+              <img src="https://image.flaticon.com/icons/svg/1976/1976311.svg">
+              <p>Contact us</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      
+      </ion-row>
+    </ion-grid>
+
+  </div>
 </ion-content>
